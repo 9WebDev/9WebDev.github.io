@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+:root {
+    --main-color: #429755;
+}
+.container {
+    height: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    border-bottom: 1px solid var(--main-color);
+    height: 80px;
+}
+.header-menu a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+.header-menu span {
+    font-size: 1.1rem;
+    font-weight: 200;
+    letter-spacing: 2px;
+    margin-left: 13px;
+    color: #000;
+}
+.header-menu {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* .header-menu .logo-block img {
+    width: 250px;
+} */
+.header-menu .logo-block {
+    height: 100%;
+    width: 250px;
+    background: url('../img/waste_logo.svg') no-repeat;
+    background-position: center;
+}
+/* Header mobile */
+@media (max-width: 768px) {
+    .header-menu span {
+        display: none;
+    }
+    .header-menu .logo-block {
+        max-width: 100px;
+        background: url('../img/waste_logo_mobile.svg') no-repeat;
+    }
+}
