@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 :root {
     --main-color: #429755;
@@ -14,10 +14,16 @@
     margin: 0 auto;
 }
 
-/* Header */
+/* -----Header----- */
 .header {
     border-bottom: 1px solid var(--main-color);
+    background-color: #fff;
     height: 80px;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
 }
 .header-menu a {
     text-decoration: none;
@@ -27,7 +33,6 @@
 .header-menu span {
     font-size: 1.1rem;
     font-weight: 200;
-    letter-spacing: 2px;
     margin-left: 13px;
     color: #000;
 }
@@ -46,7 +51,169 @@
     background: url('../img/waste_logo.svg') no-repeat;
     background-position: center;
 }
-/* Header mobile */
+
+/* Body section */
+.body-section {
+    margin-top: 80px;
+    padding-top: 20px;
+}
+
+/* -----Sidebar navigation----- */
+.sidebar-nav {
+    display: inline-block;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+    width: 270px;
+    align-self: start;
+    position: fixed;
+    z-index: 100;
+}
+.sidebar-nav .arrow::before {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    content: "";
+    display: inline-block;
+    width: 0.4rem;
+    height: 0.4rem;
+    border-right: 2px solid #000;
+    border-top: 2px solid #000;
+    transform: rotate(45deg) translateY(-50%);
+}
+.sidebar-nav a {
+    text-decoration: none;
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    color: #000;
+    width: 270px;
+}
+.sidebar-nav li {
+    list-style: none;
+    width: 270px;
+    border-bottom: 1px solid rgba(220, 220, 220, 0.8);
+}
+.sidebar-nav .catalog-ul li:last-child, .subcatalog-ul li:last-child {
+    border-bottom: none;
+}
+.catalog {
+    position: relative;
+}
+.catalog > ul > li:first-child > a {
+    background-color: var(--main-color);
+    font-size: 1.2rem;
+    padding-left: 8px;
+    letter-spacing: 1px;
+    color: #fff;
+}
+.subcatalog-ul li:first-child {
+    border-top: 1px solid transparent;
+}
+.subcatalog-ul {
+    position: absolute;
+    display: none;
+    background-color: #fff;
+    top: 42px;
+    left: 268px;
+    z-index: 100;
+    height: 91%;
+    overflow: auto;
+    box-shadow: -3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+.catalog-ul li:hover .subcatalog-ul {
+    display: block;
+}
+
+/* Subnav */
+.fixed-subnav {
+    position: fixed;
+    top: 80px;
+    background-color: #fff;
+    z-index: 90;
+    width: 100%;
+}
+/* .subnav {
+    width: 1000px;
+} */
+.subnav li {
+    list-style: none;
+}
+.subnav a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    padding: 10px 15px;
+    color: #000;
+}
+.subnav a:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+.subnav ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    padding-bottom: 12px;
+    padding-left: 330px;
+    
+}
+
+/* -----Info section----- */
+.info-section {
+    padding-top: 40px;
+    float: right;
+}
+
+/* banner-block */
+.banner-block {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.banner-block .banner {
+    background-color: grey;
+    height: 250px;
+    width: 370px;
+    margin: 20px;
+}
+/* ads */
+.ads h2 {
+    margin: 40px 0;
+}
+.ad-item {
+    margin-top: 20px;
+    line-height: 1.5;
+}
+.ad-item .activity {
+    color: #235281;
+}
+.ad-item .location {
+    font-weight: 200;
+}
+.ad-item .category {
+    color: #008e3e;
+    font-weight: normal;
+}
+.ad-item sup {
+    font-style: italic;
+}
+/* business-cards */
+.business-cards h2 {
+    margin: 40px 0;
+}
+.business-card-item {
+    margin-top: 20px;
+    line-height: 1.5;
+    font-weight: 200;
+}
+.business-card-item a {
+    font-weight: normal;
+    color: #235281;
+}
+
+
+
+/* -----Header mobile----- */
 @media (max-width: 768px) {
     .header-menu span {
         display: none;
