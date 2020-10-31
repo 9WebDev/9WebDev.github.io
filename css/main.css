@@ -52,23 +52,19 @@
     background-position: center;
 }
 
-/* Body section */
-.body-section {
-    margin-top: 80px;
-    padding-top: 20px;
-    padding-bottom: 50px;
-    height: 100%;
-    overflow: hidden;
-}
 
 /* -----Sidebar navigation----- */
 .sidebar-nav {
-    display: inline-block;
+    /* display: inline-block; */
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
     width: 270px;
     align-self: start;
-    position: fixed;
+    position: sticky;
+    top: 100px;
     z-index: 99;
+}
+.main-block {
+    display: flex;
 }
 /* Catalog & subcatalog arrow icons*/
 .sidebar-nav .arrow::before, .subcatalog-ul .arrow::before {
@@ -200,8 +196,8 @@
 
 /* -----Info section----- */
 .info-section {
-    padding-top: 40px;
-    float: right;
+    margin-top: 150px;
+    display: inline-block;
 }
 
 /* banner-block */
@@ -240,6 +236,7 @@
 }
 .ads, .business-cards {
     padding: 0 20px;
+    margin-left: 10px;
 }
 /* business-cards */
 .business-cards h2 {
@@ -262,7 +259,7 @@
 .footer {
     padding: 50px 0;
     border-top: 1px solid var(--main-color);
-
+    margin-top: 50px;
 }
 .footer .flex-footer {
     display: flex;
@@ -408,13 +405,14 @@
     .header-menu span {
         display: none;
     }
-    .body-section .fixed-subnav {
+    .main-block {
+        display: block;
+        padding: 190px 0 0 0;
+    }
+    .fixed-subnav {
         position: absolute;
         padding: 20px 0;
         top: 90px;
-    }
-    .body-section > .container {
-        padding: 0;
     }
     .fixed-subnav .subnav ul {
         padding: 20px 30px;
@@ -439,11 +437,12 @@
     .sidebar-nav li {
         width: 100%;
     }
-    .body-section {
-        margin-top: 180px;
-    }
     .info-section {
+        margin-top: 50px;
         float: none;
+    }
+    .ads, .business-cards {
+        margin-left: 0;
     }
     .banner-block {
         justify-content: center;
@@ -456,7 +455,6 @@
     }
     .footer-info {
         margin-top: 30px;
-    }
     }
     .footer-info .footer-nav ul li {
         display: inline-block;
@@ -480,26 +478,21 @@
     .header-menu .text-logo img{
         width: 50px;
     }
-
-    .body-section {
-        margin-top: 200px;
-        width: 100%;
-        overflow: auto;
-    }
-    .body-section .fixed-subnav {
-        top: 150px;
-        left: 0;
-        right: 0;
-        width: 100%;
+    /* .main-block {
         display: block;
+        padding-top: 290px;
+        width: auto;
+    } */
+    .fixed-subnav {
+        top: 150px;
         position: absolute;
     }
     .fixed-subnav .subnav ul {
+        display: flex;
         padding-left: 0;
         padding-bottom: 25px;
         flex-wrap: nowrap;
-        overflow-x: auto;
-    
+        overflow-x: scroll;
     }
     .fixed-subnav .subnav ul li {
         flex: 0 0 auto;
@@ -514,10 +507,18 @@
         border-bottom: 1px;
     } */
     .sidebar-nav {
-        top: 550px;
         width: 100%;
-        position: absolute;
-
+        position: static;
+        margin-left: 50px;
+    }
+    .sidebar-nav a, .sidebar-nav li {
+        width: 100%;
+    }
+    .banner-block {
+        display: none;
+    }
+    .ads, .business-cards {
+        margin-left: 0;
     }
 }
 
