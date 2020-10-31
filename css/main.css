@@ -196,8 +196,9 @@
 
 /* -----Info section----- */
 .info-section {
-    margin-top: 150px;
+    margin-top: 145px;
     display: inline-block;
+    width: 100%;
 }
 
 /* banner-block */
@@ -416,7 +417,136 @@
     }
     .fixed-subnav .subnav ul {
         padding: 20px 30px;
-        justify-content: space-between;
+        justify-content: center;
+    }
+    .subnav ul li {
+        margin: 0 10px;
+    }
+    .subnav a {
+        border: 1px solid rgba(220, 220, 220, 0.8);
+    }
+    .sidebar-nav {
+        position: static;
+        box-shadow: none;
+        width: 100%;
+    }
+    .sidebar-nav a {
+        width: 100%;
+        padding: 15px 40px 15px 20px;
+    }
+    .sidebar-nav .arrow::before {
+        right: 30px;
+
+    }
+    .sidebar-nav li {
+        width: 100%;
+    }
+    .info-section {
+        margin-top: 10px;
+        float: none;
+    }
+    .ads, .business-cards {
+        margin-left: 0;
+    }
+    .banner-block {
+        justify-content: space-around;
+    }
+    .banner-block .banner {
+        width: 300px;
+    }
+    .footer .flex-footer {
+        flex-wrap: wrap;
+    }
+    .footer-info {
+        margin-top: 30px;
+    }
+    .footer-info .footer-nav ul li {
+        display: inline-block;
+        margin-right: 20px;
+    }
+}
+
+/* -----Mobile----- */
+@media (max-width: 767px) {
+    /* .header {
+        height: 130px;
+        border-bottom: 2px solid var(--main-color);
+    }
+    .header-menu span {
+        display: none;
+    }
+    .header-menu .logo-block {
+        max-width: 190px;
+        background: url('../img/waste_logo_mobile.svg') no-repeat;
+    }
+    .header-menu .text-logo img{
+        width: 50px;
+    }
+    .main-block {
+        display: block;
+        padding-top: 290px;
+        width: auto;
+    }
+    .fixed-subnav {
+        top: 150px;
+        position: absolute;
+    }
+    .fixed-subnav .subnav ul {
+        display: flex;
+        padding-left: 0;
+        padding-bottom: 25px;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+    }
+    .fixed-subnav .subnav ul li {
+        flex: 0 0 auto;
+        margin-right: 20px;
+    }
+    .subnav a {
+        font-size: 1.8rem;
+        padding: 15px 20px;
+        border: 1px solid var(--main-color);
+    }
+    .sidebar-nav {
+        width: 100%;
+        position: static;
+        margin-left: 50px;
+    }
+    .sidebar-nav a, .sidebar-nav li {
+        width: 100%;
+    }
+    .banner-block {
+        display: none;
+    }
+    .ads, .business-cards {
+        margin-left: 0;
+    } */
+    .header-menu span {
+        display: none;
+    }
+    .header-menu .logo-block {
+        width: 90px;
+        background: url('../img/waste_logo_mobile.svg') no-repeat;
+        background-position: center center;
+    }
+    .main-block {
+        display: block;
+        padding: 160px 0 0 0;
+    }
+    .fixed-subnav {
+        position: absolute;
+        padding: 0;
+        top: 80px;
+    }
+    .fixed-subnav .subnav ul {
+        display: flex;
+        padding-left: 0;
+        padding-bottom: 25px;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+    }
+    .subnav ul li {
+        margin: 0 10px;
     }
     .subnav a {
         border: 1px solid rgba(220, 220, 220, 0.8);
@@ -446,82 +576,36 @@
     }
     .banner-block {
         justify-content: center;
+        display: none;
     }
     .banner-block .banner {
         width: 300px;
     }
     .footer .flex-footer {
         flex-wrap: wrap;
+        justify-content: space-between;
+        padding-bottom: 0;
+    }
+    .flex-footer > * {
+        margin-bottom: 30px;
     }
     .footer-info {
-        margin-top: 30px;
+        /* margin-top: 30px; */
     }
     .footer-info .footer-nav ul li {
         display: inline-block;
         margin-right: 20px;
     }
-}
-
-/* -----Mobile----- */
-@media (max-width: 767px) {
-    .header {
-        height: 130px;
-        border-bottom: 2px solid var(--main-color);
-    }
-    .header-menu span {
-        display: none;
-    }
-    .header-menu .logo-block {
-        max-width: 190px;
-        background: url('../img/waste_logo_mobile.svg') no-repeat;
-    }
-    .header-menu .text-logo img{
-        width: 50px;
-    }
-    /* .main-block {
-        display: block;
-        padding-top: 290px;
-        width: auto;
-    } */
-    .fixed-subnav {
-        top: 150px;
-        position: absolute;
-    }
-    .fixed-subnav .subnav ul {
-        display: flex;
-        padding-left: 0;
-        padding-bottom: 25px;
-        flex-wrap: nowrap;
-        overflow-x: scroll;
-    }
-    .fixed-subnav .subnav ul li {
-        flex: 0 0 auto;
-        margin-right: 20px;
-    }
-    .subnav a {
-        font-size: 1.8rem;
-        padding: 15px 20px;
-        border: 1px solid var(--main-color);
-    }
-    /* .sidebar-nav .catalog-ul li:last-child, .subcatalog-ul li:last-child {
-        border-bottom: 1px;
-    } */
-    .sidebar-nav {
-        width: 100%;
-        position: static;
-        margin-left: 50px;
-    }
-    .sidebar-nav a, .sidebar-nav li {
-        width: 100%;
-    }
-    .banner-block {
-        display: none;
-    }
-    .ads, .business-cards {
-        margin-left: 0;
+    .footer-info .social-links ul {
+        justify-content: center;
     }
 }
-
+@media (max-width: 520px) {
+    .footer .flex-footer {
+        flex-direction: column;
+        align-items: center;
+    }
+}
 
 .change-position {
     bottom: 395px;
