@@ -489,6 +489,9 @@
     .sidebar-nav li {
         width: 100%;
     }
+    .sidebar-nav .catalog-ul li:last-child {
+        border-bottom: 1px solid rgba(220, 220, 220, 0.8);
+    }
     .info-section {
         margin-top: 10px;
         float: none;
@@ -614,6 +617,9 @@
     }
     .sidebar-nav li {
         width: 100%;
+    }
+    .sidebar-nav .catalog-ul li:last-child {
+        border-bottom: 1px solid rgba(220, 220, 220, 0.8);
     }
     .info-section {
         margin-top: 50px;
