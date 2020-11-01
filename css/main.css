@@ -234,7 +234,7 @@
 }
 /* ads */
 .ads h2 {
-    margin: 40px 0;
+    margin: 35px 0;
 }
 .ad-item {
     margin-top: 20px;
@@ -267,8 +267,9 @@
     font-weight: 200;
 }
 .business-card-item a {
-    font-weight: normal;
-    color: #235281;
+    font-weight: 600;
+    color: #004a80;
+    text-decoration: none;
 }
 .business-card-item sup {
     font-style: italic;
