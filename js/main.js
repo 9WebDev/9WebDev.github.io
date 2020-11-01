@@ -36,13 +36,12 @@ $(document).on("click", function(e) {
         }
     })
 })
-// var listOfLinks = $(".sidebar-nav a");
-// listOfLinks.each(function(item) {
-//     console.log(listOfLinks[item]);
-// })
-// $(".catalog-ul a, .info").mouseover(function() {
-//     $(".sidebar-nav .info").addClass("active")
-// });
-// $(".catalog-ul a").mouseout(function() {
-//     $(".sidebar-nav, .info").removeClass("active")
-// });
+
+// Searchbar
+
+$(".header-menu .search-btn").on("click", function() {
+    $(".searchbar-wrapper").toggleClass("hide");
+    $(".header-menu .search-btn img").attr("src", function(index, attr) {
+        return attr != "img/close.png" ? "img/close.png" : "img/icon3.png";
+    });
+})
