@@ -90,7 +90,7 @@
     align-self: start;
     position: sticky;
     top: 100px;
-    z-index: 99;
+    z-index: 98;
 }
 .main-block {
     display: flex;
