@@ -205,13 +205,13 @@
 .banner-block {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 0 20px;
 }
 .banner-block .banner {
     background-color: grey;
-    height: 250px;
-    width: 370px;
+    height: 200px;
+    width: 300px;
     margin: 20px;
 }
 /* ads */
