@@ -52,12 +52,29 @@ $(".catalog-ul > li.catalog-item > a").on("click", function() {
     $(".mobile-menu-subcatalog").addClass("active");
 });
 
-$(".catalog-ul > li").on("click", function() {
-    console.log(this);
-})
-
 // Close button
 
 $(".mobile-menu-catalog .close-btn, .mobile-menu-subcatalog .close-btn").on("click", function() {
     $(".mobile-menu-catalog, .mobile-menu-subcatalog").removeClass("active");
+})
+
+// Data update
+
+$(".catalog-ul > li").on("click", function() {
+    var liItems = $(this).find("ul > li");
+    var headLiItemText = $(this).children("a").text();
+    $(".mobile-menu-subcatalog .subtitle a").text(headLiItemText);
+    liItems.each((index) => {
+        $(".mobile-menu-subcatalog ul div").append('<li><a href="#">' + $(liItems[index]).text() + '<span class="arrow"></span></a></li>');
+    })
+})
+// $(".mobile-menu-subcatalog .subtitle a").on("click", function() {
+//     $("mobile-menu-info").removeClass("active");
+// })
+
+$(".mobile-menu-subcatalog div").on("click", "li",function() {
+    var mobileInfoHeadText = $(this).children("a").text();
+    $(".mobile-menu-info .title a").text(mobileInfoHeadText);
+    $(".mobile-menu-info").addClass("active");
+    console.log(mobileInfoHeadText);
 })
