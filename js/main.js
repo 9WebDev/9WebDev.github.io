@@ -48,7 +48,7 @@ $(".header-menu .search-btn").on("click", function() {
 
 // Mobile menu
 
-$(".catalog-ul > li > a").on("click", function() {
+$(".catalog-ul > li.catalog-item > a").on("click", function() {
     $(".mobile-menu-subcatalog").addClass("active");
 });
 
