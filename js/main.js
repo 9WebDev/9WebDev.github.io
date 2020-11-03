@@ -45,3 +45,19 @@ $(".header-menu .search-btn").on("click", function() {
         return attr != "img/close.png" ? "img/close.png" : "img/icon3.png";
     });
 })
+
+// Mobile menu
+
+$(".catalog-ul > li > a").on("click", function() {
+    $(".mobile-menu-subcatalog").addClass("active");
+});
+
+$(".catalog-ul > li").on("click", function() {
+    console.log(this);
+})
+
+// Close button
+
+$(".mobile-menu-catalog .close-btn, .mobile-menu-subcatalog .close-btn").on("click", function() {
+    $(".mobile-menu-catalog, .mobile-menu-subcatalog").removeClass("active");
+})
