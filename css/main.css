@@ -654,6 +654,9 @@
         font-style: italic;
         font-weight: 200;
     }
+    body > div.active {
+        display: block;
+    }
 }
 
 /* -----Mobile----- */
@@ -869,6 +872,9 @@
     .mobile-menu-info .quantity, .mobile-menu-info .last-date {
         font-style: italic;
         font-weight: 200;
+    }
+    body > div.active {
+        display: block;
     }
 }
 @media (max-width: 520px) {
