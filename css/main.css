@@ -272,7 +272,9 @@
     line-height: 1.5;
 }
 .ad-item .activity {
+    font-weight: 600;
     color: #235281;
+    text-decoration: none;
 }
 .ad-item .location {
     font-weight: 200;
