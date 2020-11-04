@@ -76,6 +76,36 @@ $(".catalog-ul > li").on("click", function() {
 $(".mobile-menu-subcatalog div").on("click", "li",function() {
     var mobileInfoHeadText = $(this).children("a").text();
     $(".mobile-menu-info .title a").text(mobileInfoHeadText);
-    $(".mobile-menu-info").addClass("active");
-    console.log(mobileInfoHeadText);
+//     $(".mobile-menu-info").addClass("active");
 })
+
+var allCatalogItems = $(".catalog-ul").find(".catalog-item");
+$(".mobile-menu-catalog li.mobile-catalog-item a").on("click", function() {
+    var headTitleText = "";
+    var subUl, subUlLiItems;
+    allCatalogItems.each((index) => {
+        if ($(this).text() === $(allCatalogItems[index]).children("a").text()) {
+            headTitleText = $(allCatalogItems[index]).children("a").text();
+            subUl = $(allCatalogItems[index]).children("ul")[0];
+            subUlLiItems = $(subUl).children("li");
+
+            $(subUlLiItems).each((index) => {
+                console.log($(subUlLiItems[index]).children("a").text());
+                $(".mobile-menu-subcatalog ul div").append('<li><a href="#">' + $(subUlLiItems[index]).children("a").text() + '<span class="arrow"></span></a></li>');
+            })
+        }
+    })
+})
+
+$(".mobile-menu-subcatalog .title a").on("click", function() {
+    $(".mobile-menu-subcatalog").removeClass("active");
+    $(".mobile-menu-catalog").addClass("active");
+    $(".mobile-menu-subcatalog ul div").empty();
+})
+
+$(".mobile-menu-catalog li.mobile-catalog-item a").on("click", function() {
+    $(".mobile-menu-subcatalog").addClass("active");
+    $(".mobile-menu-catalog").removeClass("active");
+})
+
+
