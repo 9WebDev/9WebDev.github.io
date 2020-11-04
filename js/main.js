@@ -56,6 +56,7 @@ $(".catalog-ul > li.catalog-item > a").on("click", function() {
 
 $(".mobile-menu-catalog .close-btn, .mobile-menu-subcatalog .close-btn").on("click", function() {
     $(".mobile-menu-catalog, .mobile-menu-subcatalog, #mobile-menu-info").removeClass("active");
+    $(".mobile-menu-subcatalog ul div").empty();
 })
 
 // Data update
