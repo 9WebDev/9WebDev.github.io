@@ -807,7 +807,7 @@
         border-bottom: 1px solid rgba(220, 220, 220, 0.8);
         background-color: #fff;
     }
-    .mobile-menu-catalog ul li, .mobile-menu-subcatalog ul li:last-child {
+    .mobile-menu-catalog ul li:last-child, .mobile-menu-subcatalog ul div li:last-child {
         margin-bottom: 40px;
     }
     .mobile-menu-catalog ul li a {
