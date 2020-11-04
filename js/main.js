@@ -55,7 +55,7 @@ $(".catalog-ul > li.catalog-item > a").on("click", function() {
 // Close button
 
 $(".mobile-menu-catalog .close-btn, .mobile-menu-subcatalog .close-btn").on("click", function() {
-    $(".mobile-menu-catalog, .mobile-menu-subcatalog").removeClass("active");
+    $(".mobile-menu-catalog, .mobile-menu-subcatalog, #mobile-menu-info").removeClass("active");
 })
 
 // Data update
