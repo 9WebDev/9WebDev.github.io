@@ -899,6 +899,12 @@ body > div.active {
     display: block;
 }
 
+@media (max-width: 319px) {
+    .searchbar .searchbar-input {
+        padding-left: 10px;
+    }
+}
+
 /* Scrollbar styling */
 .subcatalog-ul::-webkit-scrollbar-track {
     background-color: rgb(235, 235, 235);
