@@ -911,9 +911,9 @@ a.active + ul {
 .mobile-menu-catalog, .mobile-menu-subcatalog, #mobile-menu-info {
     display: none;
 }
-body > div.active {
+/* body > div.active {
     display: block;
-}
+} */
 
 @media (max-width: 319px) {
     .searchbar .searchbar-input {
