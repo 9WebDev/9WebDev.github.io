@@ -93,6 +93,7 @@ $(".mobile-menu-catalog li.mobile-catalog-item a").on("click", function() {
                 console.log($(subUlLiItems[index]).children("a").text());
                 $(".mobile-menu-subcatalog ul div").append('<li><a href="#">' + $(subUlLiItems[index]).children("a").text() + '<span class="arrow"></span></a></li>');
             })
+            $(".mobile-menu-subcatalog .subtitle a").text(headTitleText);
         }
     })
 })
