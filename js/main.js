@@ -6,6 +6,15 @@ $(".catalog-ul > li > a").mouseover(function() {
         $(".subcatalog-ul > li > a").removeClass("active");
         $(".sidebar-nav .info").removeClass("active");
         $(this).addClass("active");
+        $('#back-drop').css({
+            width: '100%',
+            height: '100%',
+            'z-index': '95',
+            position: 'fixed',
+            left: '0%',
+            top: "0%",
+            'background-color': 'rgba(255, 255, 255, 0.6)'
+        });
     }
 });
 $(".subcatalog-ul > li > a").mouseover(function() {
