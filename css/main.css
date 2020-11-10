@@ -36,6 +36,9 @@
     margin-left: 13px;
     color: #000;
 }
+.header-menu span:hover {
+    text-decoration: underline;
+}
 .header-menu {
     height: 100%;
     display: flex;
@@ -276,6 +279,9 @@
     color: #235281;
     text-decoration: none;
 }
+.ad-item .activity:hover {
+    text-decoration: underline;
+}
 .ad-item .location {
     font-weight: 200;
 }
@@ -303,6 +309,9 @@
     font-weight: 600;
     color: #004a80;
     text-decoration: none;
+}
+.business-card-item a:hover {
+    text-decoration: underline;
 }
 .business-card-item sup {
     font-style: italic;
