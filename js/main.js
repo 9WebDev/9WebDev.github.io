@@ -7,6 +7,9 @@ $(".catalog-ul > li > a").mouseover(function() {
         $(".sidebar-nav .info").removeClass("active");
         $(this).addClass("active");
         $("#back-drop").removeAttr("style");
+        var test = $(this).parent()[0];
+        $(test).hasClass("direct-info") ? $(".sidebar-nav .info").addClass("direct-active") : $(".sidebar-nav .info").removeClass("direct-active");
+        $(test).hasClass("direct-info-var2") ? $(".sidebar-nav .info2").addClass("direct-active") : $(".sidebar-nav .info2").removeClass("direct-active");
     }
 });
 $(".subcatalog-ul > li > a").mouseover(function() {
@@ -43,6 +46,8 @@ $(document).on("click", function(e) {
         listOfLinks.each(function(item) {
             if (e.target != listOfLinks[item]){
                 $(".sidebar-nav a, .sidebar-nav .info").removeClass("active");
+                $(".sidebar-nav .info").removeClass("direct-active")
+                $(".sidebar-nav .info2").removeClass("direct-active");
                 $("#back-drop").css("display", "none");
             }
         })
