@@ -1,4 +1,4 @@
-$(".catalog-ul > li > a").mouseover(function() {
+$(".catalog-ul > li.catalog-item > a").mouseover(function() {
     if ($(document).width() >= 1024) {
         if ($(".catalog-ul > li > a").hasClass("active")) {
             $(".catalog-ul > li > a").removeClass("active");
