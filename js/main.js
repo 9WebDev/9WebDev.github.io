@@ -54,6 +54,15 @@ $(document).on("click", function(e) {
     }
 })
 
+// Close open menu on tablet and mobile size
+
+$(window).resize(function() {
+    if ($(window).width() <= 1023) {
+        $(".catalog-ul > .catalog-item > a").removeClass("active");
+        $("#back-drop").css("display", "none");
+    }
+});
+
 // Searchbar
 
 $(".header-menu .search-btn").on("click", function() {
