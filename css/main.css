@@ -927,7 +927,7 @@ a.active + ul {
     border-color: white;
 }
 
-.mobile-menu-catalog, .mobile-menu-subcatalog, #mobile-menu-info {
+.mobile-menu-catalog, .mobile-menu-subcatalog, .mobile-menu-info {
     display: none;
 }
 /* body > div.active {
