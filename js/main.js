@@ -83,6 +83,7 @@ $(".catalog-ul > li").on("click", function() {
 $(".mobile-menu-catalog .close-btn, .mobile-menu-subcatalog .close-btn").on("click", function() {
     $(".mobile-menu-catalog, .mobile-menu-subcatalog, .mobile-menu-info").removeClass("active");
     $(".mobile-menu-subcatalog ul div").empty();
+    $(".mobile-menu-subcatalog .subtitle .arrow-back").css("display", "none");
 })
 
 // Data update
@@ -102,6 +103,7 @@ $(".catalog-ul > li").on("click", function() {
 $(".mobile-menu-subcatalog div").on("click", "li.mobile-subcatalog-item",function() {
     var mobileInfoHeadText = $(this).children("a").text();
     $(".mobile-menu-info .title a").text(mobileInfoHeadText);
+    $(".mobile-menu-subcatalog .subtitle .arrow-back").removeAttr("style");
     $(".mobile-menu-info").addClass("active");
 })
 
@@ -129,6 +131,12 @@ $(".mobile-menu-subcatalog .title a").on("click", function() {
     $(".mobile-menu-info").removeClass("active");
     $(".mobile-menu-catalog").addClass("active");
     $(".mobile-menu-subcatalog ul div").empty();
+    $(".mobile-menu-subcatalog .subtitle .arrow-back").css("display", "none");
+})
+
+$(".mobile-menu-subcatalog .subtitle a").on("click", function() {
+    $(".mobile-menu-info").removeClass("active");
+    $(".mobile-menu-subcatalog .subtitle .arrow-back").css("display", "none");
 })
 
 $(".mobile-menu-catalog li.mobile-catalog-item a").on("click", function() {
