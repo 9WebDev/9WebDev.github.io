@@ -81,7 +81,7 @@ $(".catalog-ul > li").on("click", function() {
 // Close button
 
 $(".mobile-menu-catalog .close-btn, .mobile-menu-subcatalog .close-btn").on("click", function() {
-    $(".mobile-menu-catalog, .mobile-menu-subcatalog, #mobile-menu-info").removeClass("active");
+    $(".mobile-menu-catalog, .mobile-menu-subcatalog, .mobile-menu-info").removeClass("active");
     $(".mobile-menu-subcatalog ul div").empty();
 })
 
@@ -92,17 +92,17 @@ $(".catalog-ul > li").on("click", function() {
     var headLiItemText = $(this).children("a").text();
     $(".mobile-menu-subcatalog .subtitle a").text(headLiItemText);
     liItems.each((index) => {
-        $(".mobile-menu-subcatalog ul div").append('<li><a href="#">' + $(liItems[index]).text() + '<span class="arrow"></span></a></li>');
+        $(".mobile-menu-subcatalog ul div").append('<li class="mobile-subcatalog-item"><a href="#">' + $(liItems[index]).text() + '<span class="arrow"></span></a></li>');
     })
 })
 // $(".mobile-menu-subcatalog .subtitle a").on("click", function() {
 //     $("mobile-menu-info").removeClass("active");
 // })
 
-$(".mobile-menu-subcatalog div").on("click", "li",function() {
+$(".mobile-menu-subcatalog div").on("click", "li.mobile-subcatalog-item",function() {
     var mobileInfoHeadText = $(this).children("a").text();
     $(".mobile-menu-info .title a").text(mobileInfoHeadText);
-//     $(".mobile-menu-info").addClass("active");
+    $(".mobile-menu-info").addClass("active");
 })
 
 var allCatalogItems = $(".catalog-ul").find(".catalog-item");
@@ -117,7 +117,7 @@ $(".mobile-menu-catalog li.mobile-catalog-item a").on("click", function() {
 
             $(subUlLiItems).each((index) => {
                 console.log($(subUlLiItems[index]).children("a").text());
-                $(".mobile-menu-subcatalog ul div").append('<li><a href="#">' + $(subUlLiItems[index]).children("a").text() + '<span class="arrow"></span></a></li>');
+                $(".mobile-menu-subcatalog ul div").append('<li class="mobile-subcatalog-item"><a href="#">' + $(subUlLiItems[index]).children("a").text() + '<span class="arrow"></span></a></li>');
             })
             $(".mobile-menu-subcatalog .subtitle a").text(headTitleText);
         }
@@ -126,6 +126,7 @@ $(".mobile-menu-catalog li.mobile-catalog-item a").on("click", function() {
 
 $(".mobile-menu-subcatalog .title a").on("click", function() {
     $(".mobile-menu-subcatalog").removeClass("active");
+    $(".mobile-menu-info").removeClass("active");
     $(".mobile-menu-catalog").addClass("active");
     $(".mobile-menu-subcatalog ul div").empty();
 })
