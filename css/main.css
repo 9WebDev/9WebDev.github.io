@@ -199,6 +199,10 @@
 .sidebar-nav .active {
     display: block;
 }
+.sidebar-nav .direct-active {
+    left: 270px;
+    display: block;
+}
 .sidebar-nav .info h5,.sidebar-nav .info2 h5 {
     font-weight: normal;
     font-size: inherit;
