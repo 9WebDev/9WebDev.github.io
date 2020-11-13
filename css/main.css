@@ -131,9 +131,6 @@
     border-top: 2px solid #000;
     transform: rotate(45deg) translateY(-50%);   
 }
-.subcatalog-ul::-webkit-scrollbar {
-    width: 20px;
-}
 .sidebar-nav a {
     text-decoration: none;
     position: relative;
@@ -178,9 +175,6 @@
 .subcatalog-ul li {
     overflow: visible;
 }
-/* .catalog-ul li:hover .subcatalog-ul {
-    display: block;
-} */
 .catalog-ul a:hover {
     background-color: var(--main-color);
     color: #fff;
@@ -940,14 +934,6 @@ a.active + ul {
     }
 }
 
-/* Scrollbar styling */
-.subcatalog-ul::-webkit-scrollbar-track {
-    background-color: rgb(235, 235, 235);
-}
-.subcatalog-ul::-webkit-scrollbar-thumb {
-    background-color: white;
-    border: 1px solid rgba(220, 220, 220, 0.8);
-}
 @media screen and (max-width: 580px) {
     .mobile-banner1 {
         display: block;
@@ -978,4 +964,20 @@ a.active + ul {
     left: 0;
     top: 0;
     background-color: rgba(255, 255, 255, 0.6);
+}
+
+.mCSB_scrollTools {
+    width: 20px;
+    background-color: lightgrey;
+}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    width: 18px;
+    background-color: white;
+    border-radius: 0;
+}
+.mCSB_inside > .mCSB_container {
+    margin-right: 20px;
+}
+.mCSB_draggerRail {
+    display: none;
 }
