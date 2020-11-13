@@ -14,8 +14,8 @@ $(".catalog-ul > li.catalog-item > a").mouseover(function() {
 });
 $(".subcatalog-ul > li > a").mouseover(function() {
     if ($(document).width() >= 1024) {
-        if ($(".subcatalog-ul > li > a").hasClass("active")) {
-            $(".subcatalog-ul > li > a").removeClass("active");
+        if ($(".subcatalog-ul li > a").hasClass("active")) {
+            $(".subcatalog-ul li > a").removeClass("active");
         }
         $(this).addClass("active");
         $(".sidebar-nav .info").addClass("active")
@@ -94,8 +94,8 @@ $(".mobile-menu-catalog .close-btn, .mobile-menu-subcatalog .close-btn").on("cli
 
 // Data update
 
-$(".catalog-ul > li").on("click", function() {
-    var liItems = $(this).find("ul > li");
+$(".catalog-ul li").on("click", function() {
+    var liItems = $(this).find("ul li");
     var headLiItemText = $(this).children("a").text();
     $(".mobile-menu-subcatalog .subtitle a").text(headLiItemText);
     liItems.each((index) => {
@@ -129,7 +129,7 @@ $(".mobile-menu-catalog li.mobile-catalog-item a").on("click", function() {
         if ($(this).text() === $(allCatalogItems[index]).children("a").text()) {
             headTitleText = $(allCatalogItems[index]).children("a").text();
             subUl = $(allCatalogItems[index]).children("ul")[0];
-            subUlLiItems = $(subUl).children("li");
+            subUlLiItems = $(subUl).find("li");
 
             $(subUlLiItems).each((index) => {
                 console.log($(subUlLiItems[index]).children("a").text());
