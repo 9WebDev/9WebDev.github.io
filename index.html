@@ -350,12 +350,12 @@
                 <li class="mobile-catalog-item"><a href="#">Технологии, оборудование <span class="arrow"></span></a></li>
                 <li class="mobile-catalog-item"><a href="#">Продукция из вторсырья <span class="arrow"></span></a></li>
                 <li class="mobile-catalog-item"><a href="#">Услуги <span class="arrow"></span></a></li>
-                <li class="mobile-catalog-item"><a href="#">Запчасти, узлы <span class="arrow"></span></a></li>
-                <li class="mobile-catalog-item"><a href="#">Средства защиты <span class="arrow"></span></a></li>
-                <li class="mobile-catalog-item"><a href="#">Средства измерений <span class="arrow"></span></a></li>
-                <li class="mobile-catalog-item"><a href="#">Готовый бизнес <span class="arrow"></span></a></li>
-                <li class="mobile-catalog-item"><a href="#">Инвестиции <span class="arrow"></span></a></li>
-                <li class="mobile-catalog-item"><a href="#">Работа <span class="arrow"></span></a></li>
+                <li class="mobile-catalog-item mobile-direct-info"><a href="#">Запчасти, узлы <span class="arrow"></span></a></li>
+                <li class="mobile-catalog-item mobile-direct-info"><a href="#">Средства защиты <span class="arrow"></span></a></li>
+                <li class="mobile-catalog-item mobile-direct-info"><a href="#">Средства измерений <span class="arrow"></span></a></li>
+                <li class="mobile-catalog-item mobile-direct-info-var2"><a href="#">Готовый бизнес <span class="arrow"></span></a></li>
+                <li class="mobile-catalog-item mobile-direct-info-var2"><a href="#">Инвестиции <span class="arrow"></span></a></li>
+                <li class="mobile-catalog-item mobile-direct-info-var2"><a href="#">Работа <span class="arrow"></span></a></li>
             </ul>
         </div>
     </div>
@@ -363,7 +363,7 @@
         <div class="mobile-menu-container">
             <ul>
                 <li class="title"><span class="arrow-back"></span><a href="#">Объявления, Визитки</a><span class="close-btn">&#xd7;</span></li>
-                <li class="subtitle"><span class="arrow-back"></span><a href="#">Технологии, оборудование</a></li>
+                <li class="subtitle"><span class="arrow-back" style="display: none;"></span><a href="#">Технологии, оборудование</a></li>
                 <div></div>
 <!--                 <li><a href="#">Вторсырье <span class="arrow"></span></a></li>
                 <li><a href="#">Секонд-хенд <span class="arrow"></span></a></li>
@@ -381,7 +381,7 @@
     </div>
     <div class="mobile-menu-info" id="mobile-menu-info">
         <ul class="info">
-            <li class="title"><a href="#">Полимеры</a></li>
+            <li class="title"><a href="#"></a></li>
             <li>
                 <a href="#">
                     <h5>Объявления:</h5>
@@ -415,34 +415,70 @@
             </li>
         </ul>
     </div>
+    <div class="mobile-menu-info2" id="mobile-menu-info2">
+        <ul class="info">
+            <li>
+                <a href="#">
+                    <h5>Объявления:</h5>
+                    <h5>Предлагаю</h5>
+                    <span class="quantity">Количество: <span>4420</span></span>
+                    <span class="last-date">Дата последнего: <span>18.03.19</span></span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <h5>Объявления:</h5>
+                    <h5>Ищу</h5>
+                    <span class="quantity">Количество: <span>4420</span></span>
+                    <span class="last-date">Дата последнего: <span>18.03.19</span></span>
+                </a>
+            </li>
+            <li>
+                 <a href="#">
+                    <h5>Объявления:</h5>
+                    <h5>Все</h5>
+                    <span class="quantity">Количество: <span>4420</span></span>
+                    <span class="last-date">Дата последнего: <span>18.03.19</span></span>
+                </a>
+             </li>
+             <li>
+                <a href="#">
+                    <h5>Визитки</h5>
+                    <span class="quantity">Количество: <span>4420</span></span>
+                    <span class="last-date">Дата последнего: <span>18.03.19</span></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="mobile-menu-info3" id="mobile-menu-info3">
+        <ul class="info">
+            <li>
+                <a href="#">
+                    <h5>Объявления:</h5>
+                    <h5>Предлагаю</h5>
+                    <span class="quantity">Количество: <span>4420</span></span>
+                    <span class="last-date">Дата последнего: <span>18.03.19</span></span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <h5>Объявления:</h5>
+                    <h5>Ищу</h5>
+                    <span class="quantity">Количество: <span>4420</span></span>
+                    <span class="last-date">Дата последнего: <span>18.03.19</span></span>
+                </a>
+            </li>
+            <li>
+                 <a href="#">
+                    <h5>Объявления:</h5>
+                    <h5>Все</h5>
+                    <span class="quantity">Количество: <span>4420</span></span>
+                    <span class="last-date">Дата последнего: <span>18.03.19</span></span>
+                </a>
+             </li>
+        </ul>
+    </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/main.js"></script>
-    <script>
-    //    $(document).on("scroll", function(){
-    //         var sidebarTop = $(".sidebar-nav").offset().top;
-    //         var sidebarHeight = $(".sidebar-nav").outerHeight(true);
-    //         var footerHeight = $(".footer").outerHeight(true) + 50;
-    //         var documentHeight = $(document).height();
-    //         if (sidebarTop + sidebarHeight == documentHeight - footerHeight) {
-    //             $(".sidebar-nav").addClass("change-position");
-    //             console.log("Hi");
-    //         } else {
-    //             $(".sidebar-nav").removeClass("change-position");
-    //         }
-    //         console.log(sidebarTop + sidebarHeight);
-    //         console.log(documentHeight - footerHeight);
-    //     });
-
-    // function checkOffset() {
-    // if($('.sidebar-nav').offset().top + $('.sidebar-nav').height() >= $('.footer').offset().top - 10)
-    //     $('.sidebar-nav').addClass("change-position");
-    // if($(document).scrollTop() + window.innerHeight < $('.footer').offset().top)
-    //     $('.sidebar-nav').removeClass("change-position"); // restore when you scroll up
-    //     }
-    // $(document).scroll(function() {
-    //     checkOffset();
-    // });
-    </script>
-    
 </body>
 </html>
