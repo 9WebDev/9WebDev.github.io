@@ -60,6 +60,7 @@ $(window).resize(function() {
     if ($(window).width() <= 1023) {
         $(".catalog-ul > .catalog-item > a").removeClass("active");
         $("#back-drop").css("display", "none");
+        $(".info, .info2").removeClass("direct-active");
     }
 });
 
