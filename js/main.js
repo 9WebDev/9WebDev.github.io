@@ -77,12 +77,17 @@ $(".header-menu .search-btn").on("click", function() {
 
 $(".catalog-ul > li").on("click", function() {
     $(".mobile-menu-subcatalog").addClass("active");
+    if ($(this).hasClass("direct-info")) {
+        $(".mobile-menu-info2").addClass("active")
+    } else if ($(this).hasClass("direct-info-var2")) {
+        $(".mobile-menu-info3").addClass("active");
+    }
 });
 
 // Close button
 
 $(".mobile-menu-catalog .close-btn, .mobile-menu-subcatalog .close-btn").on("click", function() {
-    $(".mobile-menu-catalog, .mobile-menu-subcatalog, .mobile-menu-info").removeClass("active");
+    $(".mobile-menu-catalog, .mobile-menu-subcatalog, .mobile-menu-info, .mobile-menu-info2, .mobile-menu-info3").removeClass("active");
     $(".mobile-menu-subcatalog ul div").empty();
     $(".mobile-menu-subcatalog .subtitle .arrow-back").css("display", "none");
 })
@@ -108,6 +113,14 @@ $(".mobile-menu-subcatalog div").on("click", "li.mobile-subcatalog-item",functio
     $(".mobile-menu-info").addClass("active");
 })
 
+$(".mobile-menu-catalog li.mobile-catalog-item").on("click", function() {
+    if ($(this).hasClass("mobile-direct-info")) {
+        $(".mobile-menu-info2").addClass("active");
+    } else if ($(this).hasClass("mobile-direct-info-var2")) {
+        $(".mobile-menu-info3").addClass("active");
+    }
+})
+
 var allCatalogItems = $(".catalog-ul").find(".catalog-item");
 $(".mobile-menu-catalog li.mobile-catalog-item a").on("click", function() {
     var headTitleText = "";
@@ -130,6 +143,8 @@ $(".mobile-menu-catalog li.mobile-catalog-item a").on("click", function() {
 $(".mobile-menu-subcatalog .title a").on("click", function() {
     $(".mobile-menu-subcatalog").removeClass("active");
     $(".mobile-menu-info").removeClass("active");
+    $(".mobile-menu-info2").removeClass("active");
+    $(".mobile-menu-info3").removeClass("active");
     $(".mobile-menu-catalog").addClass("active");
     $(".mobile-menu-subcatalog ul div").empty();
     $(".mobile-menu-subcatalog .subtitle .arrow-back").css("display", "none");
