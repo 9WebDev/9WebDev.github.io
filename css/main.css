@@ -218,9 +218,9 @@
     z-index: 90;
     width: 100%;
 }
-/* .subnav {
-    width: 1000px;
-} */
+.fixed-subnav .container {
+    padding: 0 10px;
+}
 .subnav li {
     list-style: none;
 }
