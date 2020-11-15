@@ -577,6 +577,7 @@
         top: 8px;
         font-weight: 200;
         color: var(--main-color);
+        cursor: pointer;
     }
     .mobile-menu-container {
         height: 100%;
