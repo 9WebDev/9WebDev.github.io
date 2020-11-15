@@ -17,6 +17,7 @@ $(".subcatalog-ul > li > a").mouseover(function() {
         if ($(".subcatalog-ul li > a").hasClass("active")) {
             $(".subcatalog-ul li > a").removeClass("active");
         }
+        $(this).parent().parent().hasClass("mCS_no_scrollbar_y") ? $(".sidebar-nav .info").css("left", "538px") : $(".sidebar-nav .info").removeAttr("style");
         $(this).addClass("active");
         $(".sidebar-nav .info").addClass("active")
     }
