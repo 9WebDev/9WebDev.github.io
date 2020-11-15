@@ -11,6 +11,13 @@ $(".catalog-ul > li.catalog-item > a").mouseover(function() {
         var test = $(this).parent()[0];
         $(test).hasClass("direct-info") ? $(".sidebar-nav .info").addClass("direct-active") : $(".sidebar-nav .info").removeClass("direct-active");
         $(test).hasClass("direct-info-var2") ? $(".sidebar-nav .info2").addClass("direct-active") : $(".sidebar-nav .info2").removeClass("direct-active");
+        switch ($(this).attr("data-id")) {
+            case "7":
+                $(".sidebar-nav .info .ad-offer").attr("href", "https://waste.ua/index.php?page=ads&parent_id=88&adtype=0");
+                break;
+            default:
+                $(".sidebar-nav .info .ad-offer").attr("href", "#");
+        }
     }
 });
 $(".subcatalog-ul > li > a").mouseover(function() {
@@ -20,12 +27,24 @@ $(".subcatalog-ul > li > a").mouseover(function() {
         }
         $(this).parent().parent().hasClass("mCS_no_scrollbar_y") ? $(".sidebar-nav .info").css("left", "538px") : $(".sidebar-nav .info").removeAttr("style");
         $(this).addClass("active");
-        $(".sidebar-nav .info").addClass("active")
+        $(".sidebar-nav .info").addClass("active");
+        switch ($(this).attr("data-id")) {
+            case "1-1":
+                $(".sidebar-nav .info .ad-offer").attr("href", "https://waste.ua/index.php?page=ads&category_id=20&adtype=0");
+                break;
+            case "3-1":
+                $(".sidebar-nav .info .ad-search").attr("href", "https://waste.ua/index.php?page=ads&category_id=60&adtype=1");
+                break;
+            case "4-2":
+                $(".sidebar-nav .info .ad-offer").attr("href", "https://waste.ua/index.php?page=ads&category_id=63&adtype=0");
+                break;
+            default:
+                $(".sidebar-nav .info .ad-offer").attr("href", "#");
+                $(".sidebar-nav .info .ad-search").attr("href", "#");
+        }
     }
 });
-$(".subcatalog-ul > li > a").mouseout(function() {
-    // $(".sidebar-nav .info").removeClass("active");
-});
+
 $(".sidebar-nav .info a").mouseover(function() {
     if ($(document).width() >= 1024) {
         if ($(".sidebar-nav .info a").hasClass("active")) {
@@ -33,14 +52,15 @@ $(".sidebar-nav .info a").mouseover(function() {
         }
         $(this).addClass("active");
     }
-})
+});
+
 $(".sidebar-nav .info a").mouseout(function() {
     if ($(document).width() >= 1024) {
         if ($(".sidebar-nav .info a").hasClass("active")) {
             $(".sidebar-nav .info a").removeClass("active");
         }
     }
-})
+});
 
 $(document).on("click", function(e) {
     if ($(document).width() >= 1024) {
@@ -54,7 +74,7 @@ $(document).on("click", function(e) {
             }
         })
     }
-})
+});
 
 // Close open menu on tablet and mobile size
 
@@ -114,7 +134,7 @@ $(".mobile-menu-subcatalog div").on("click", "li.mobile-subcatalog-item",functio
     $(".mobile-menu-info .title a").text(mobileInfoHeadText);
     $(".mobile-menu-subcatalog .subtitle .arrow-back").removeAttr("style");
     $(".mobile-menu-info").addClass("active");
-})
+});
 
 $(".mobile-menu-catalog li.mobile-catalog-item").on("click", function() {
     if ($(this).hasClass("mobile-direct-info")) {
@@ -122,7 +142,7 @@ $(".mobile-menu-catalog li.mobile-catalog-item").on("click", function() {
     } else if ($(this).hasClass("mobile-direct-info-var2")) {
         $(".mobile-menu-info3").addClass("active");
     }
-})
+});
 
 var allCatalogItems = $(".catalog-ul").find(".catalog-item");
 $(".mobile-menu-catalog li.mobile-catalog-item a").on("click", function() {
@@ -141,7 +161,7 @@ $(".mobile-menu-catalog li.mobile-catalog-item a").on("click", function() {
             $(".mobile-menu-subcatalog .subtitle a").text(headTitleText);
         }
     })
-})
+});
 
 $(".mobile-menu-subcatalog .title a").on("click", function() {
     $(".mobile-menu-subcatalog").removeClass("active");
@@ -151,16 +171,16 @@ $(".mobile-menu-subcatalog .title a").on("click", function() {
     $(".mobile-menu-catalog").addClass("active");
     $(".mobile-menu-subcatalog ul div").empty();
     $(".mobile-menu-subcatalog .subtitle .arrow-back").css("display", "none");
-})
+});
 
 $(".mobile-menu-subcatalog .subtitle a").on("click", function() {
     $(".mobile-menu-info").removeClass("active");
     $(".mobile-menu-subcatalog .subtitle .arrow-back").css("display", "none");
-})
+});
 
 $(".mobile-menu-catalog li.mobile-catalog-item a").on("click", function() {
     $(".mobile-menu-subcatalog").addClass("active");
     $(".mobile-menu-catalog").removeClass("active");
-})
+});
 
 
