@@ -7,6 +7,7 @@ $(".catalog-ul > li.catalog-item > a").mouseover(function() {
         $(".sidebar-nav .info").removeClass("active");
         $(this).addClass("active");
         $("#back-drop").removeAttr("style");
+        $(".sidebar-nav .info").removeAttr("style");
         var test = $(this).parent()[0];
         $(test).hasClass("direct-info") ? $(".sidebar-nav .info").addClass("direct-active") : $(".sidebar-nav .info").removeClass("direct-active");
         $(test).hasClass("direct-info-var2") ? $(".sidebar-nav .info2").addClass("direct-active") : $(".sidebar-nav .info2").removeClass("direct-active");
