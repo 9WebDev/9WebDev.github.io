@@ -3,7 +3,7 @@ $(".catalog-ul > li.catalog-item > a").mouseover(function() {
         if ($(".catalog-ul > li > a").hasClass("active")) {
             $(".catalog-ul > li > a").removeClass("active");
         }
-        $(".subcatalog-ul > li > a").removeClass("active");
+        $(".subcatalog-ul li > a").removeClass("active");
         $(".sidebar-nav .info").removeClass("active");
         $(this).addClass("active");
         $("#back-drop").removeAttr("style");
