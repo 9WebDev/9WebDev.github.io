@@ -127,6 +127,7 @@ $(".mobile-menu-catalog .close-btn, .mobile-menu-subcatalog .close-btn").on("cli
     $(".mobile-menu-subcatalog ul div").empty();
     $(".mobile-menu-subcatalog .subtitle .arrow-back").css("display", "none");
     $(".mobile-menu-subcatalog").removeAttr("style");
+    $("body").removeAttr("style");
 })
 
 // Data update
@@ -138,6 +139,9 @@ $(".catalog-ul li").on("click", function() {
     liItems.each((index) => {
         $(".mobile-menu-subcatalog ul div").append('<li class="mobile-subcatalog-item"><a href="#">' + $(liItems[index]).text() + '<span class="arrow"></span></a></li>');
     })
+    if ($(".mobile-menu-subcatalog").hasClass("active")) {
+        $("body").css("overflow", "hidden");
+    }
 })
 // $(".mobile-menu-subcatalog .subtitle a").on("click", function() {
 //     $("mobile-menu-info").removeClass("active");
