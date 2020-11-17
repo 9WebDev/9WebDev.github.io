@@ -143,9 +143,6 @@ $(".catalog-ul li").on("click", function() {
         $("body").css("overflow", "hidden");
     }
 })
-// $(".mobile-menu-subcatalog .subtitle a").on("click", function() {
-//     $("mobile-menu-info").removeClass("active");
-// })
 
 $(".mobile-menu-subcatalog div").on("click", "li.mobile-subcatalog-item",function() {
     var mobileInfoHeadText = $(this).children("a").text();
