@@ -81,6 +81,7 @@ $("#back-drop").on("click", function() {
     $(".sidebar-nav .info").removeClass("direct-active")
     $(".sidebar-nav .info2").removeClass("direct-active");
     $("#back-drop").css("display", "none");
+    $('#body').css('overflow', 'scroll')
 });
 $(".header").on("click", function() {
     $(".sidebar-nav a, .sidebar-nav .info").removeClass("active");
