@@ -199,6 +199,12 @@
     left: 270px;
     display: block;
 }
+.direct-active li:hover {
+    background: #429755;
+}
+.direct-active li:hover > a {
+    color: white;
+}
 .sidebar-nav .info h5,.sidebar-nav .info2 h5 {
     font-weight: normal;
     font-size: inherit;
@@ -731,6 +737,9 @@
     .sidebar-nav li {
         width: 100%;
     }
+    .sidebar-nav li:first-child {
+        margin-top: 10px;
+    }
     .sidebar-nav .catalog-ul li:last-child {
         border-bottom: 1px solid rgba(220, 220, 220, 0.8);
     }
@@ -806,6 +815,7 @@
         top: 8px;
         font-weight: 200;
         color: var(--main-color);
+        cursor: pointer;
     }
     .mobile-menu-container {
         height: 100%;
