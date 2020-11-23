@@ -51,7 +51,9 @@
     background: url('../img/waste_logo.svg') no-repeat;
     background-position: center;
 }
-
+.ads .ad-item {
+    display: block !important;
+}
 /* Searchbar */
 .searchbar-wrapper {
     position: fixed;
